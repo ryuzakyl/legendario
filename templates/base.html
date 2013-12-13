@@ -1,10 +1,20 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
-<head>
-    <title>{% block title %}{% endblock %}</title>
-    {% block load_references %}{% endblock %}
-</head>
-<body>
-    {% block content %}{% endblock %}
-</body>
+    <head>
+        {# some meta tags #}
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="title" content="Hostal El Legendario - Ciénaga de Zapata - Cuba">
+	    <meta name="description" content="Rooms for rent with ocean view and excellent traditional cuban food. Ecological environment in harmony with nature.">
+
+        {# page title #}
+        <title>{% block title %}{% endblock %}</title>
+
+        {# loading references to .js, .css, etc. #}
+        {% block load_references %}{% endblock %}
+    </head>
+
+    <body onload="emailFill()">
+        {% block content %}{% endblock %}
+    </body>
 </html>

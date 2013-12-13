@@ -18,5 +18,5 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 
     # home
-    url(r'^$', 'legendario_website.views.home', name='home'),
+    url(r'^', include('home.urls')),
 )

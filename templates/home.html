@@ -2,6 +2,170 @@
 
 {% block title %}Hostal El Legendario - Ciénaga de Zapata - Cuba{% endblock %}
 
+{% block load_references %}
+    <link rel="shortcut icon" href="http://www.el-legendario.com/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}contents/jquery.fancybox.css" />
+	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}contents/jquery.fancybox-buttons.css" />
+
+    <script type="text/javascript" src="{{ STATIC_URL }}scripts/jquery.fancybox-buttons.js"></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}scripts/jquery.fancybox.pack.js"></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}scripts/jquery.js"></script>
+
+    <style>
+		html, body
+        {
+            margin:0;
+            padding:0;
+            background:#9c331c;
+            font-family:Arial, sans serif;
+            font-size:12px;
+        }
+
+		#page
+        {
+            width:960px;
+            margin:0 auto;
+            background:#000;
+			-webkit-box-shadow: 0 0 10px #000;
+			-moz-box-shadow:    0 0 10px #000;
+			box-shadow:         0 0 10px #000;
+		}
+
+		#header
+        {
+            position:relative;
+            height:126px;
+            padding:20px 0;
+            background:#b3ce5e;
+            overflow:hidden;
+        }
+
+        #header .logo
+        {
+            position:absolute;
+            bottom:15px;
+            left:0;
+            z-index:10;
+        }
+
+        #header .slider
+        {
+            position:absolute;
+            bottom:15px;
+            left:0;
+            z-index:1;
+        }
+
+		#content{background:#fff;margin:5px 0;padding:20px;}
+
+		.pictos
+        {
+            float:right;
+        }
+
+        #footer
+        {
+            padding:20px 0 40px;
+            background:#b3ce5e;
+            text-align:center;
+        }
+	</style>
+
+	<script>
+		function hideMail(mail,domain)
+        {
+            this.location = 'mailto:' + mail + '@'+ domain;
+        }
+
+		function emailFill()
+        {
+			domain = 'yahoo.es';
+			email = 'hostalellegendario';
+			document.getElementById("email").innerHTML = email + "@" + domain;
+		}
+	</script>
+
+    <link rel="stylesheet" href="data:text/css,@import%20url%28%27%20http%3A//c1.tacdn.com/css2/widget/cdswidFRR-v1250510475a.css%20%27%29%3B">
+
+    <script type="text/javascript" src="{{ STATIC_URL }}scripts/cdswidgets_m-c-v11482047253a.js"></script>
+
+{% endblock %}
+
 {% block content %}
-    <h1>Hello World</h1>
+    <div id="page">
+    <div id="header_holder">
+        <div id="header">
+            <img class="logo" src="{{ STATIC_URL }}images/logo-el-legendario.png" alt="El Legendario - Ivette y Arnoldo">
+            <img class="slider" src="{{ STATIC_URL }}images/header.jpg"  alt="El Legendario - Ciénaga de Zapata">
+        </div>
+    </div>
+
+
+    <div id="content_holder">
+        <div id="content">
+            <img class="pictos" src="{{ STATIC_URL }}images/pictos.png" alt="El Legendario - Ciénaga de Zapata">
+            <h1>Rooms for rent with ocean view and excellent traditional cuban food.</h1>
+            <p class="chapeau">Ecological environment in harmony with nature.</p>
+            <p>
+                Con el despertar de las olas y la buena comida cubana.<br>
+                Ambiente ecológico en total armonía con la naturaleza.
+            </p>
+            <div class="offers">
+                <h2>Ofertas / Offers :</h2>
+                <ul>
+                    <li>Senderismo / Hiking</li>
+                    <li>Transporte / Transport</li>
+                    <li>Clases de baile / Dance lessons</li>
+                    <li>Clases de buceo / Diving lessons</li>
+                    <li>Exposiciones de arte / Art exhibition</li>
+                </ul>
+            </div>
+            <div class="prices">
+                <h2>Prices :</h2>
+                <ul>
+                    <li><strong>Room (3 hab)</strong>: 25 CUC</li>
+                    <li><strong>Suite with Ocean view </strong>: 30 CUC</li>
+                    <li><strong>Desayuno/Breakfast </strong>: 4 CUC/pers.</li>
+                    <li><strong>Cena/Dinner </strong>: 10 CUC/pers.</li>
+                </ul>
+            </div>
+
+            <div class="prices">
+                <h2>Contact :</h2>
+                <p>
+                    <strong>Hostal El Legendario</strong>
+                    Caletón, Playa Larga,  <br>
+                    Ciénaga de Zapata. Matanzas. Cuba.
+                </p>
+                <h2>Teléfonos / Phones :</h2>
+                <p>
+                    (53) 5295 5746 / 5264 1526<br>
+                    (53- 7) 207 6646<br>
+                    (53- 45) 98 7437<br>
+                </p>
+            </div>
+
+            <div id="TA_rated992" class="TA_rated">
+                <div id="CDSWIDFRR" class="widFRR">
+                    <img class="widFRRIMG" id="CDSWIDFRRIMG" src="{{ STATIC_URL }}images/tripadvisor.gif" alt="Hostal El Legendario, Playa Larga, Matanzas Province">
+
+                    <var class="widFRRCopy">
+                        <a target="_blank" href="http://www.tripadvisor.com/Hotel_Review-g2053536-d3803175-Reviews-Hostal_El_Legendario-Playa_Larga_Matanzas_Province_Cuba.html" onclick="ta.cds.handleTALink(11424,this);return true;">Hostal El Legendario</a>
+                    </var><!--/ cdsRRFCopy-->
+                </div><!--/ cdsFRRBadge-->
+            </div>
+
+            <script src="{{ STATIC_URL }}scripts/wejs"></script>
+            <script src="{{ STATIC_URL }}scripts/WidgetEmbed-rated"></script>
+
+        </div>
+    </div>
+
+    <div id="footer_holder">
+        <div id="footer">
+            Caletón, Playa Larga, Ciénaga de Zapata. Matanzas. Cuba. - (53) 5295 5746 / 5264 1526 - <a href="javascript:hideMail('hostalellegendario','yahoo.es');" id="email">hostalellegendario@yahoo.es</a>
+        </div>
+    </div>
+</div>
 {% endblock %}
