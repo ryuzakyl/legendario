@@ -1,0 +1,127 @@
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+  
+
+if (window.taValidate == undefined) {
+   window.taOnLoad   = window.onload;
+   window.taValList  = Array();
+   window.taValIndex = 0;
+   window.taValidate = function () {
+      if (window.taOnLoad != null) {
+         try {
+         window.taOnLoad();
+         } catch (err) { }
+      }
+      for (ii = 0; ii < window.taValIndex; ii=ii+1) {
+         fname = window.taValList[ii]
+         fname();
+      }
+   }
+   window.taAddValidator = function (fname) {
+      window.taValList[window.taValIndex] = fname;
+      window.taValIndex                   = window.taValIndex + 1;
+      }
+   window.onload = window.taValidate
+}
+window.taAddValidator (injectrated7069)
+
+                  if(document.createStyleSheet) {
+        document.createStyleSheet("http://c1.tacdn.com/css2/widget/cdswidFRR-v1250510475a.css");
+      } else {
+        var stylesImport = "@import url(' http://c1.tacdn.com/css2/widget/cdswidFRR-v1250510475a.css ');";
+        var newSS=document.createElement('link');
+        newSS.rel='stylesheet';
+        newSS.href='data:text/css,'+escape(stylesImport);
+        if (document.getElementsByTagName("head")[0]) {
+            document.getElementsByTagName("head")[0].appendChild(newSS);
+        } else {             document.write('<link rel="stylesheet" href="data:text/css,' + escape(stylesImport) + '"/>');
+        }
+      }
+        
+      var newJs = document.createElement('script');
+    newJs.setAttribute('type', 'text/javascript');
+    newJs.setAttribute('src', 'http://c1.tacdn.com/js3/widget/cdswidgets_m-c-v11482047253a.js');
+    document.getElementsByTagName("head")[0].appendChild(newJs);
+  
+var validityRegEx = [
+    new RegExp('https?://([^/]+\.|)tripadvisor\.(com\.ar|com|ca|jp|co\.uk|de|com\.ve|com\.pe|dk|ie|fr|co\.id|com\.mx|it|com\.my|com\.br|com\.tr|com\.eg|se|in|co\.kr|co|com\.gr|cl|com\.sg|com\.au|ru|es|nl|com\.tw)/.*')
+  ,  new RegExp('https?://([^/]+\.|)daodao\.(com)/.*')
+];
+
+function injectrated7069() {
+    var container = document.getElementById('TA_rated992');
+  if (container == null) {
+        var scriptTags = document.getElementsByTagName("script");
+    for (var i=0; i<scriptTags.length; i++)
+    {
+      if (scriptTags[i] != null && scriptTags[i].src != null &&
+          scriptTags[i].src.indexOf("rated?uniq=992") >= 0)
+      {
+        var msgElem = document.createElement('div');
+        if (msgElem != null && msgElem != 'undefined')
+        {
+          msgElem.style.margin='8px';
+          msgElem.style.color='red';
+          msgElem.innerHTML="Please check the TripAdvisor code and install again.";
+          var parentElem = scriptTags[i].parentNode;
+          if (parentElem != null && parentElem != 'undefined')
+          {
+            parentElem.appendChild(msgElem);
+          }
+          break;
+        }
+      }
+    }
+    return;
+  }
+
+  container.innerHTML = '<div id="CDSWIDFRR" class="widFRR"> '+
+'<img class="widFRRIMG" id="CDSWIDFRRIMG" src="http://www.tripadvisor.com/img/cdsi/img2/badges/recommended_en-11424-2.gif" alt="Hostal El Legendario, Playa Larga, Matanzas Province"/> '+
+'<var class="widFRRCopy"><a target="_blank" href="http://www.tripadvisor.com/Hotel_Review-g2053536-d3803175-Reviews-Hostal_El_Legendario-Playa_Larga_Matanzas_Province_Cuba.html" onclick="ta.cds.handleTALink(11424,this);return true;">Hostal El Legendario</a></var><!--/ cdsRRFCopy--> '+
+'</div><!--/ cdsFRRBadge--> '+
+'';
+}
+
